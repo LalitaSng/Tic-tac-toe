@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./styles.css";
 import { getWinner } from "./util";
+import Cell from "./Cell/Cell";
 
 export default function App() {
   const [winner, setWinner] = useState();
@@ -11,7 +12,7 @@ export default function App() {
     ["", "", ""]
   ]);
 
-  handleClick = (row, col) => {
+  const handleClick = (row, col) => {
     if (board[row][col] != "") return;
     setBoard((prev) => {
       const newBoard = [...prev];
@@ -43,14 +44,7 @@ export default function App() {
         </div>
       )}
       <div className="row">
-        <div
-          className="column"
-          onClick={() => {
-            handleClick(0, 0);
-          }}
-        >
-          {board[0][0]}
-        </div>
+        <Cell label={board[0][0]}/>
         <div
           className="column"
           onClick={() => {
