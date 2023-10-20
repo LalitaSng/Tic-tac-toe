@@ -44,7 +44,7 @@ export default function App() {
         </div>
       )}
       <div className="row">
-        <Cell label={board[0][0]}/>
+        <Cell label={board[0][0]} handleClick = {handleClick}/>
         <div
           className="column"
           onClick={() => {
