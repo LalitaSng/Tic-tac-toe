@@ -2,13 +2,16 @@ import './ Cell.module.css';
 
 const Cell = (
     {
-        label
+        label,
+        handleClick,
+        row,
+        col
     }
 ) =>{
     return (
         <div 
             className={"column"}
-            // onClick={() => handleClick(0, 0)}
+            onClick={() => handleClick(row, col)}
         >
           {label}
         </div>
