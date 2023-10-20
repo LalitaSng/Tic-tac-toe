@@ -1,0 +1,27 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: gray;
+  padding: 50px;
+  margin: 2px;
+  border-radius: 2px solid black;
+}
+.button {
+  background-color: brown;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  margin: 10px;
+}
