@@ -45,66 +45,17 @@ export default function App() {
       )}
       <div className="row">
         <Cell label={board[0][0]} handleClick = {handleClick}/>
-        <div
-          className="column"
-          onClick={() => {
-            handleClick(0, 1);
-          }}
-        >
-          {board[0][1]}
-        </div>
-        <div
-          className="column"
-          onClick={() => {
-            handleClick(0, 2);
-          }}
-        >
-          {board[0][2]}
-        </div>
+        <Cell label={board[0][1]}/>
+        <Cell label={board[0][2]}/>
       </div>
       <div className="row">
-        <div
-          className="column"
-          onClick={() => {
-            handleClick(1, 0);
-          }}
-        >
-          {board[1][0]}
-        </div>
-        <div
-          className="column"
-          onClick={() => {
-            handleClick(1, 1);
-          }}
-        >
-          {board[1][1]}
-        </div>
-        <div
-          className="column"
-          onClick={() => {
-            handleClick(1, 2);
-          }}
-        >
-          {board[1][2]}
-        </div>
+        <Cell label={board[1][0]}/>
+        <Cell label={board[1][1]}/>
+        <Cell label={board[1][2]}/>
       </div>
       <div className="row">
-        <div
-          className="column"
-          onClick={() => {
-            handleClick(2, 0);
-          }}
-        >
-          {board[2][0]}
-        </div>
-        <div
-          className="column"
-          onClick={() => {
-            handleClick(2, 1);
-          }}
-        >
-          {board[2][1]}
-        </div>
+        <Cell label={board[2][0]}/>
+        <Cell label={board[2][1]}/>
         <div
           className="column"
           onClick={() => {
