@@ -9,21 +9,20 @@ const Board = (
 ) => {
     return(
         <div>
-            <div className="row">
-                <Cell label={board[0][0]} handleClick={handleClick} row={0} col={0}/>
-                <Cell label={board[0][1]} handleClick={handleClick} row={0} col={1}/>
-                <Cell label={board[0][2]} handleClick={handleClick} row={0} col={2}/>
-            </div>
-            <div className="row">
-                <Cell label={board[1][0]} handleClick = {handleClick} row={1} col={0}/>
-                <Cell label={board[1][1]} handleClick = {handleClick} row={1} col={1}/>
-                <Cell label={board[1][2]} handleClick = {handleClick} row={1} col={2}/>
-            </div>
-            <div className="row">
-                <Cell label={board[2][0]} handleClick = {handleClick} row={2} col={0}/>
-                <Cell label={board[2][1]} handleClick = {handleClick} row={2} col={1}/>
-                <Cell label={board[2][1]} handleClick = {handleClick} row={2} col={2}/>
-            </div>
+            {
+                board.map((row,rowIndex) => {
+                    return (
+                        <div className="row">
+                            {
+                                row.map((colValue, colIndex) => (
+                                    <Cell label={colValue} handleClick = {handleClick} row={rowIndex} col={colIndex}/>
+                                )
+                                )
+                            }
+                        </div>
+                    )
+                })
+            }
         </div>
     )
 }
