@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./styles.css";
 import { getWinner } from "./util";
 import Cell from "./Cell/Cell";
+import Board from "./Board/Board";
 
 export default function App() {
   const [winner, setWinner] = useState();
@@ -43,28 +44,7 @@ export default function App() {
           Game Over <div> Winner : {winner}</div>
         </div>
       )}
-      <div className="row">
-        <Cell label={board[0][0]} handleClick={handleClick} row={0} col={0}/>
-        <Cell label={board[0][1]} handleClick={handleClick} row={0} col={1}/>
-        <Cell label={board[0][2]} handleClick={handleClick} row={0} col={2}/>
-      </div>
-      <div className="row">
-        <Cell label={board[1][0]} handleClick = {handleClick} row={1} col={0}/>
-        <Cell label={board[1][1]} handleClick = {handleClick} row={1} col={1}/>
-        <Cell label={board[1][2]} handleClick = {handleClick} row={1} col={2}/>
-      </div>
-      <div className="row">
-        <Cell label={board[2][0]} handleClick = {handleClick} row={2} col={0}/>
-        <Cell label={board[2][1]} handleClick = {handleClick} row={2} col={1}/>
-        <div
-          className="column"
-          onClick={() => {
-            handleClick(2, 2);
-          }}
-        >
-          {board[2][2]}
-        </div>
-      </div>
+      <Board board = {board} handleClick={handleClick} />
       <button className="button" onClick={handleButtonClick}>
         Reset
       </button>
