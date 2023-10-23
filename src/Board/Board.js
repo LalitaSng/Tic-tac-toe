@@ -12,10 +12,10 @@ const Board = (
             {
                 board.map((row,rowIndex) => {
                     return (
-                        <div className="row">
+                        <div className="row" key={`row-${rowIndex}`}>
                             {
                                 row.map((colValue, colIndex) => (
-                                    <Cell label={colValue} handleClick = {handleClick} row={rowIndex} col={colIndex}/>
+                                    <Cell key={`col-${rowIndex}-${colIndex}`} label={colValue} handleClick = {handleClick} row={rowIndex} col={colIndex}/>
                                 )
                                 )
                             }

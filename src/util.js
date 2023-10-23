@@ -1,6 +1,18 @@
+export const GRID_SIZE = 5;
+export const getInitialBoard = () => {
+  const initialBoard = [];
+    for(let i=0; i<GRID_SIZE; i++){
+      const innerArray =[];
+      for(let j=0; j<GRID_SIZE; j++){
+        innerArray.push('');
+      }
+      initialBoard.push(innerArray);
+    }
+  return initialBoard;
+}
 export function getWinner(board, row, col, player) {
   let i,
-    stop = false;
+  stop = false;
   for (i = 0; i < board.length; i++) {
     if (board[row][i] !== player) {
       stop = true;
