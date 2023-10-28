@@ -1,4 +1,4 @@
-import './ Cell.module.css';
+import './ Cell.css';
 
 const Cell = (
     {

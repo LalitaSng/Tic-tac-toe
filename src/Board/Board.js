@@ -1,5 +1,5 @@
 import Cell from "../Cell/Cell";
-import './Board.module.css';
+import './Board.css';
 
 const Board = (
     {

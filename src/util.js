@@ -1,9 +1,9 @@
-export const GRID_SIZE = 5;
-export const getInitialBoard = () => {
+
+export const getInitialBoard = (gridSize = 3) => {
   const initialBoard = [];
-    for(let i=0; i<GRID_SIZE; i++){
+    for(let i=0; i<gridSize; i++){
       const innerArray =[];
-      for(let j=0; j<GRID_SIZE; j++){
+      for(let j=0; j<gridSize; j++){
         innerArray.push('');
       }
       initialBoard.push(innerArray);
