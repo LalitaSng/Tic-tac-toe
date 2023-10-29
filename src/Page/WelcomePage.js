@@ -8,7 +8,7 @@ import { TextField } from '@mui/material';
 import { flexbox, Stack } from '@mui/system';
 import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
 import {useDispatch} from 'react-redux';
-import {setGridSize} from '../Store/actions'; 
+import {setGridSize, setPlayersName} from '../Store/actions'; 
 
 const style = {
     position: 'absolute' ,
@@ -35,6 +35,7 @@ const WelcomePage = () => {
     const dispatch = useDispatch();
     const handleSubmit =()=>{
         dispatch(setGridSize(parseInt(boardSize)));
+        dispatch(setPlayersName(player1, player2));
     }
 
 
