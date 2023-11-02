@@ -9,6 +9,7 @@ import { flexbox, Stack } from '@mui/system';
 import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
 import {useDispatch} from 'react-redux';
 import {setGridSize, setPlayersName} from '../Store/actions'; 
+import { useNavigate } from 'react-router-dom';
 
 const style = {
     position: 'absolute' ,
@@ -31,11 +32,14 @@ const WelcomePage = () => {
     const [player1, setPlayer1] = useState('');
     const [player2, setPlayer2] = useState('');
     const [boardSize, setBoardSize] = useState('');
+    const navigate = useNavigate();
 
     const dispatch = useDispatch();
+    
     const handleSubmit =()=>{
         dispatch(setGridSize(parseInt(boardSize)));
         dispatch(setPlayersName(player1, player2));
+        navigate('game-page');
     }
 
 

@@ -1,5 +1,5 @@
 export const SET_GRID_SIZE = 'SET_GRID_SIZE'; 
-export const SET_PLAYER_NAME = 'SET_PLAYER_NAME';
+export const SET_PLAYERS_NAME = 'SET_PLAYER_NAME';
 
 const initalState = {
     gridSize : 3,
@@ -14,7 +14,7 @@ const reducer = (state = initalState, action) => {
                 ...state,
                 gridSize : action.payload
             };
-        case SET_PLAYER_NAME :
+        case SET_PLAYERS_NAME :
             return{
                 ...state,
                 player1 : action.payload.player1,

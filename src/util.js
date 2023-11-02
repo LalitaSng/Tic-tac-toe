@@ -1,5 +1,5 @@
 
-export const getInitialBoard = (gridSize = 3) => {
+export const getInitialBoard = (gridSize ) => {
   const initialBoard = [];
     for(let i=0; i<gridSize; i++){
       const innerArray =[];

@@ -1,4 +1,4 @@
-import { SET_GRID_SIZE, SET_PLAYER_NAME } from "../Reducers";
+import { SET_GRID_SIZE, SET_PLAYERS_NAME } from "../Reducers";
 
 export const setGridSize = (gridSize) => {
     return {
@@ -7,9 +7,9 @@ export const setGridSize = (gridSize) => {
     }
 };
 
-export const setPlayersName = (gridSize) => {
+export const setPlayersName = (player1, player2) => {
     return {
-        type : SET_GRID_SIZE,
+        type : SET_PLAYERS_NAME,
         payload : {player1 : player1, player2 : player2}
     }
 };
